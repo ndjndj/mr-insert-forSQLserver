@@ -5,9 +5,23 @@ const main = () => {
         'load'
       , () => {
           receiveCSV();
+          outputQuery();
         }
     );
 
+}
+
+function outputQuery() {
+  const createButton = document.getElementById('create');
+  createButton.addEventListener(
+      'onClick'
+    , function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        createQuery();
+      }
+    , false
+  );
 }
 
 const receiveCSV = () => {
@@ -127,12 +141,23 @@ function createTable(filedata) {
 
 }
 
+
+
 function createQuery() {
   const tableName = document.getElementById('table-name').value;
   let columnNames = [];
   let datas = [];
+  let selects = [];
 
-
+  const query = `
+    INSERT INTO ${tableName}() VALUES
+        ()
+      , ()
+      , ()
+  `;
+  console.log(query);
 }
+
+
 
 main();
