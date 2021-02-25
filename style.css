@@ -34,3 +34,7 @@ td {
     background-color: #e97755;
     cursor: pointer;
 }
+
+#query {
+    width: 100%;
+}
