@@ -68,7 +68,7 @@ function createSelect() {
   let select = document.createElement('select');
   let option = document.createElement('option');
 
-  types = ['\'\'で囲まない', '\'\'で囲む'];
+  let types = ['\'\'で囲まない', '\'\'で囲む'];
   for (var i = 0; i < types.length; i++) {
     option.value = i;
     option.innerText = types[i];
