@@ -60,9 +60,9 @@ const receiveCSV = () => {
 
 function previewFile(file) {
   let fr = new FileReader();
-  fr.readAsDataURL(file);
-  fr.onload = function() {
-    console.log(fr.result);
+  fr.readAsText(file);
+  fr.onload = function(e) {
+    console.log(e.target.result);
   }
 }
 
