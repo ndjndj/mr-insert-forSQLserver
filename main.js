@@ -145,12 +145,13 @@ function createTable(filedata) {
 
 function createQuery() {
   const tableName = document.getElementById('table-name').value;
-  let columnNames = [];
+  let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
   let selects = [];
 
+
   const query = `
-    INSERT INTO ${tableName}() VALUES
+    INSERT INTO ${tableName}(${columnName}) VALUES
         ()
       , ()
       , ()
