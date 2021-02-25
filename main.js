@@ -1,6 +1,6 @@
 const main = () => {
     //
-
+  receiveCSV();
 }
 
 const receiveCSV = () => {
@@ -59,3 +59,5 @@ function previewFile(file) {
     console.log(fr.result);
   }
 }
+
+main();
