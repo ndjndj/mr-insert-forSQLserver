@@ -146,15 +146,40 @@ function createTable(filedata) {
 function createQuery() {
   const tableName = document.getElementById('table-name').value;
   let columnName = CSV_ARRAYS[0].join(',');
-  let datas = [];
-  let selects = [];
+  let datas;
+  let selects = document.getElementsByClassName('select');
+  let cellString = '';
 
+  var tmpArr = [];
+  var type;
+  var cell;
+  for (var i = 1; i < CSV_ARRAYS.length; i++) {
+    for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
+      type = selects[j];
+      switch(type) {
+        case 0:
+          cell = CSV_ARRAYS[i][j];
+          break;
+        case 1:
+          cell = `'${String(CSV_ARRAYS[i][j])}'`;
+          break;
+        default:
+          break;
+      }
+      cell = cell == '' || cell == 0 ? null : cell;
+      tmpArr.push(cell);
+    }
+    datas.push(tmpArr);
+    tmpArr = [];
+  }
+
+  for (var i = 0; i < datas.length; i++) {
+    cellString += i == 0 ? `    (${datas[i].join(',')})\n` : `  , (${datas[i].join(',')})\n`;
+  }
 
   const query = `
     INSERT INTO ${tableName}(${columnName}) VALUES
-        ()
-      , ()
-      , ()
+    ${cellString}
   `;
   console.log(query);
 }
