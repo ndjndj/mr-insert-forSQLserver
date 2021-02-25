@@ -14,7 +14,7 @@ const main = () => {
 function outputQuery() {
   const createButton = document.getElementById('create');
   createButton.addEventListener(
-      'onClick'
+      'click'
     , function(e) {
         e.stopPropagation();
         e.preventDefault();
