@@ -1,5 +1,6 @@
 select {
-    width: 100px;
+    width: 150px;
+    margin: 2px;
 }
 
 table {
@@ -7,11 +8,11 @@ table {
 }
 
 th {
-    width: 100px;
+    width: 150px;
     border: solid 1px #000000;
 }
 
 td {
-    width: 100px;
+    width: 150px;
     border: solid 1px #000000;
 }
