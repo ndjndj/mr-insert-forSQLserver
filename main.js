@@ -51,7 +51,7 @@ const receiveCSV = () => {
   fileInput.addEventListener(
       'change'
     , function() {
-       
+      previewFile(this.files[0]);
       }
   );
 
