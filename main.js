@@ -59,9 +59,16 @@ function previewFile(file) {
   let fr = new FileReader();
   fr.readAsText(file);
   fr.onload = function(e) {
-    console.log(e.target.result);
+    initialize();
     createTable(e.target.result);
   }
+}
+
+function initialize() {
+  const input = document.getElementById('file-input');
+  const table = document.getElementById('result');
+  input.value = null;
+  table.innerHTML = '';
 }
 
 function createSelect() {
@@ -118,5 +125,7 @@ function createTable(filedata) {
   result.appendChild(table);
 
 }
+
+
 
 main();
