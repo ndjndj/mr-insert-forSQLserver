@@ -64,6 +64,20 @@ function previewFile(file) {
   }
 }
 
+function createSelect() {
+  let select = document.createElement('select');
+  let option = document.createElement('option');
+
+  types = ['\'\'で囲まない', '\'\'で囲む'];
+  for (var i = 0; i < types.length; i++) {
+    option.value = i;
+    option.innerText = types[i];
+    select.appendChild(option);
+    option = document.createElement('option');
+  }
+  return select;
+}
+
 function createTable(filedata) {
   const arrCSV = filedata.split('\n').map(s => s.split(','));
 
@@ -74,8 +88,16 @@ function createTable(filedata) {
   let tmpElem;
   let th = document.createElement('th');
   let td = document.createElement('td');
+  let select = createSelect();
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
+      if (i == 0) {
+        select.id = String(j+1);
+        result.appendChild(select);
+        select = createSelect();
+        console.log(j);
+      }
+
       tmpElem = i == 0 ? th : td;
       console.log(arrCSV[i][j]);
       tmpElem.innerText = arrCSV[i][j];
