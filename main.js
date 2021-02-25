@@ -183,7 +183,7 @@ function createQuery() {
     ${cellString}
   `;
 
-  document.getElementsByClassName('query').innerText = query;
+  document.getElementById('query').innerText = query;
 }
 
 
