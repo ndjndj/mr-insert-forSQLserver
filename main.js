@@ -146,7 +146,7 @@ function createTable(filedata) {
 function createQuery() {
   const tableName = document.getElementById('table-name').value;
   let columnName = CSV_ARRAYS[0].join(',');
-  let datas;
+  let datas = [];
   let selects = document.getElementsByClassName('select');
   let cellString = '';
 
