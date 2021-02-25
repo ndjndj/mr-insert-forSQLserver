@@ -182,7 +182,8 @@ function createQuery() {
     INSERT INTO ${tableName}(${columnName}) VALUES
     ${cellString}
   `;
-  console.log(query);
+
+  document.getElementsByClassName('query').innerText = query;
 }
 
 
