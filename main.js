@@ -1,5 +1,6 @@
+var CSV_ARRAYS;
+
 const main = () => {
-    //
     window.addEventListener(
         'load'
       , () => {
@@ -74,7 +75,7 @@ function initialize() {
 function createSelect() {
   let select = document.createElement('select');
   let option = document.createElement('option');
-
+  select.className = 'select';
   let types = ['\'\'で囲まない', '\'\'で囲む'];
   for (var i = 0; i < types.length; i++) {
     option.value = i;
@@ -87,7 +88,7 @@ function createSelect() {
 
 function createTable(filedata) {
   const arrCSV = filedata.split('\n').map(s => s.split(','));
-
+  CSV_ARRAYS = arrCSV;
   const result = document.getElementById('result');
 
   let table = document.createElement('table');
@@ -99,7 +100,7 @@ function createTable(filedata) {
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 0) {
-        select.id = String(j+1);
+        select.id = String(j);
         result.appendChild(select);
         select = createSelect();
         console.log(j);
@@ -126,6 +127,12 @@ function createTable(filedata) {
 
 }
 
+function createQuery() {
+  const tableName = document.getElementById('table-name').value;
+  let columnNames = [];
+  let datas = [];
 
+
+}
 
 main();
