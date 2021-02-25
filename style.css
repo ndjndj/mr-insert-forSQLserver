@@ -2,10 +2,16 @@ select {
     width: 100px;
 }
 
+table {
+    border: solid 1px #000000;
+}
+
 th {
     width: 100px;
+    border: solid 1px #000000;
 }
 
 td {
     width: 100px;
+    border: solid 1px #000000;
 }
