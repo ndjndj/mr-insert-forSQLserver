@@ -117,11 +117,9 @@ function createTable(filedata) {
         select.id = String(j);
         result.appendChild(select);
         select = createSelect();
-        console.log(j);
       }
 
       tmpElem = i == 0 ? th : td;
-      console.log(arrCSV[i][j]);
       tmpElem.innerText = arrCSV[i][j];
       tmpRow.appendChild(tmpElem);
 
@@ -155,7 +153,8 @@ function createQuery() {
   var cell;
   for (var i = 1; i < CSV_ARRAYS.length; i++) {
     for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
-      type = selects[j];
+      type = Number(selects[j].value);
+
       switch(type) {
         case 0:
           cell = CSV_ARRAYS[i][j];
@@ -166,7 +165,9 @@ function createQuery() {
         default:
           break;
       }
-      cell = cell == '' || cell == 0 ? null : cell;
+      console.log(cell);
+      cell = cell == '' || cell == 0 ? 'NULL' : cell;
+
       tmpArr.push(cell);
     }
     datas.push(tmpArr);
