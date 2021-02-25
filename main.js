@@ -1,6 +1,12 @@
 const main = () => {
     //
-  receiveCSV();
+    window.addEventListener(
+        'load'
+      , () => {
+          receiveCSV();
+        }
+    );
+
 }
 
 const receiveCSV = () => {
@@ -45,7 +51,7 @@ const receiveCSV = () => {
   fileInput.addEventListener(
       'change'
     , function() {
-
+       
       }
   );
 
