@@ -29,3 +29,8 @@ td {
     margin-top: 10%;
     border-radius: 5px;
 }
+
+.btn:hover {
+    background-color: #e97755;
+    cursor: pointer;
+}
