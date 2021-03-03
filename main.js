@@ -165,7 +165,6 @@ function createQuery() {
         default:
           break;
       }
-      console.log(cell);
       cell = cell == '' || cell == 0 ? 'NULL' : cell;
 
       tmpArr.push(cell);
