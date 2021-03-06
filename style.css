@@ -1,3 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+
+.header {
+    background-color: #FFFFFF;
+}
+
+#header-list {
+    list-style: none;
+}
+
+.header {
+    padding: 0 30px;
+    display: flex;
+    height: 60px;
+    border-bottom: dashed 1px #CCCCCC;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.header nav {
+    margin-left: auto;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header ul li {
+    margin-left: 20px;
+}
+
 select {
     width: 150px;
     margin: 2px;
@@ -47,6 +93,7 @@ td {
 }
 
 #drop-zone p {
-    line-height: 180px;
+    line-height: 200px;
     text-align: center;
+
 }
