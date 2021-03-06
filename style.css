@@ -38,3 +38,10 @@ td {
 #query {
     width: 100%;
 }
+
+#drop-zone {
+    border: dotted 2px #e2dfdf;
+    border-radius: 5px;
+    height: 5.0rem;
+    margin: 2% 20% 2% 20%;
+}
