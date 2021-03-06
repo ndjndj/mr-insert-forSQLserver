@@ -42,6 +42,11 @@ td {
 #drop-zone {
     border: dotted 2px #e2dfdf;
     border-radius: 5px;
-    height: 5.0rem;
+    height: 200px;
     margin: 2% 20% 2% 20%;
+}
+
+#drop-zone p {
+    line-height: 180px;
+    text-align: center;
 }
