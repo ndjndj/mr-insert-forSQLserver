@@ -112,12 +112,19 @@ function createTable(filedata) {
   let td = document.createElement('td');
   let select = createSelect();
   let selector = document.getElementById('selector');
+  let selectDiv = document.createElement('div');
+  let selectName = document.createElement('p');
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 0) {
         select.id = String(j);
-        selector.appendChild(select);
+        selectName.innerText = `${arrCSV[i][j]}: `;
+        selectDiv.appendChild(selectName);
+        selectDiv.appendChild(select);
+        selector.appendChild(selectDiv);
         select = createSelect();
+        selectDiv.createElement('div');
+        selectName.createElement('p');
       }
 
       tmpElem = i == 0 ? th : td;
