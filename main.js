@@ -123,8 +123,8 @@ function createTable(filedata) {
         selectDiv.appendChild(select);
         selector.appendChild(selectDiv);
         select = createSelect();
-        selectDiv.createElement('div');
-        selectName.createElement('p');
+        selectDiv = document.createElement('div');
+        selectName = document.createElement('p');
       }
 
       tmpElem = i == 0 ? th : td;
