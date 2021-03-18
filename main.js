@@ -101,8 +101,11 @@ function createSelect() {
 }
 
 function createTable(filedata) {
-  const arrCSV = filedata.split('\n').map(s => s.split(','));
+  let delimFileData = filedata.replace(/\r\n/g, '\n');
+
+  const arrCSV = delimFileData.split('\n').map(s => s.split(','));
   CSV_ARRAYS = arrCSV;
+  console.log(CSV_ARRAYS);
   const result = document.getElementById('result');
 
   let table = document.createElement('table');
@@ -111,20 +114,12 @@ function createTable(filedata) {
   let th = document.createElement('th');
   let td = document.createElement('td');
   let select = createSelect();
-  let selector = document.getElementById('selector');
-  let selectDiv = document.createElement('div');
-  let selectName = document.createElement('p');
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 0) {
         select.id = String(j);
-        selectName.innerText = `${arrCSV[i][j]}: `;
-        selectDiv.appendChild(selectName);
-        selectDiv.appendChild(select);
-        selector.appendChild(selectDiv);
+        result.appendChild(select);
         select = createSelect();
-        selectDiv = document.createElement('div');
-        selectName = document.createElement('p');
       }
 
       tmpElem = i == 0 ? th : td;
@@ -150,6 +145,7 @@ function createTable(filedata) {
 
 
 function createQuery() {
+  const result = document.getElementById('result');
   const tableName = document.getElementById('table-name').value;
   let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
@@ -160,6 +156,11 @@ function createQuery() {
   var type;
   var cell;
   for (var i = 1; i < CSV_ARRAYS.length; i++) {
+    // 最終行に改行が入っている場合
+    console.log(CSV_ARRAYS[i]);
+    if (i == CSV_ARRAYS.length - 1 && CSV_ARRAYS[i].length == 1 && CSV_ARRAYS[i] == '') {
+      continue;
+    }
     for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
       type = Number(selects[j].value);
 
@@ -173,7 +174,7 @@ function createQuery() {
         default:
           break;
       }
-      cell = cell == '' || cell == 0 ? 'NULL' : cell;
+      cell = cell == '' ? 'NULL' : cell;
 
       tmpArr.push(cell);
     }
@@ -186,11 +187,13 @@ function createQuery() {
   }
 
   const query = `
-    INSERT INTO ${tableName}(${columnName}) VALUES
+    INSERT INTO ${tableName}(${columnName}) VALUES \n
     ${cellString}
   `;
 
-  document.getElementById('query').innerText = query;
+  document.getElementById('query').value = query;
+  result.style.display = 'none';
+  window.alert('complete!');
 }
 
 
