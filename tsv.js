@@ -25,15 +25,13 @@ function outputQuery() {
 }
 
 const receiveCSV = () => {
-  
+
   const createButton = document.getElementById('create');
   createButton.addEventListener(
       'click'
     , function(e) {
         const fileInput = document.getElementById('input');
-        console.log(156)
         createTable(fileInput.value);
-        console.log(fileInput.value);
       }
   );
 }
@@ -70,12 +68,18 @@ function createTable(filedata) {
   let tmpElem;
   let th = document.createElement('th');
   let td = document.createElement('td');
+  let optionRow = document.createElement('tr');
   let select = createSelect();
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
-      if (i == 0) {
+      if (i == 1) {
         select.id = String(j);
         result.appendChild(select);
+        // initialize
+        th = null;
+        td = null;
+        th = document.createElement('th');
+        td = document.createElement('td');
         select = createSelect();
       }
 
