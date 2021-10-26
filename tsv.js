@@ -74,11 +74,12 @@ function createTable(filedata) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
         select.id = String(j);
-        result.appendChild(select);
+
+        tmpElem = td;
+        tmpElem.innerHTML = select;
+        optionRow.appendChild(tmpElem);
         // initialize
-        th = null;
         td = null;
-        th = document.createElement('th');
         td = document.createElement('td');
         select = createSelect();
       }
@@ -94,6 +95,9 @@ function createTable(filedata) {
       td = document.createElement('td');
     }
 
+    if(i==1) {
+      table.appendChild(optionRow);
+    }
     table.appendChild(tmpRow);
     tmpRow = null;
     tmpRow = document.createElement('tr');
