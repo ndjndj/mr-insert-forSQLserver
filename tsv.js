@@ -76,7 +76,7 @@ function createTable(filedata) {
         select.id = String(j);
 
         tmpElem = td;
-        tmpElem.innerHTML = select;
+        tmpElem.appendChild(select);
         optionRow.appendChild(tmpElem);
         // initialize
         td = null;
