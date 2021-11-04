@@ -19,7 +19,7 @@ function loadTSV() {
   return arrCSV;
 }
 
-function tsvToJson() {
+function convertTSVToJson() {
   const arrCSV = loadTSV();
   const toJson = {};
   let cmpcd = '';
@@ -38,3 +38,4 @@ function updateJsonArea(json) {
   const stringifyJson = JSON.stringify(json);
   jsonArea.value = stringifyJson;
 }
+
