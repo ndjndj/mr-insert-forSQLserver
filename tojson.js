@@ -1,11 +1,10 @@
-const main = () => {
-  window.addEventListener(
-      'load'
-    , () => {
-        onClickConvertBtn();
-    }
-  );
-}
+window.addEventListener(
+    'load'
+  , () => {
+      onClickConvertBtn();
+  }
+);
+
 
 function initialize() {
   document.getElementById('input').value = null;
@@ -16,6 +15,7 @@ function loadTSV() {
   const tsv = document.getElementById('input').value;
   let delimFileData = tsv.replace(/\r\n/g, '\n');
   const arrCSV = delimFileData.split('\n').map(s => s.split('\t'));
+  console.log(arrCSV);
   return arrCSV;
 }
 
@@ -40,14 +40,15 @@ function updateJsonArea(json) {
 }
 
 function onClickConvertBtn() {
-  document.getElementById('convert').addEventListener(
+  const btn = document.getElementById('convert');
+  btn.addEventListener(
       'click'
     , function(e) {
-        e.stopPropagation;
-        e.preventDefault();
-        initialize();
-        const json = convertTSVToJson();
-        updateJsonArea(json);
+        //e.stopPropagation();
+        //e.preventDefault();
+        // initialize();
+        // const json = convertTSVToJson();
+        // updateJsonArea(json);
         window.alert('complete.');
     }
   );
