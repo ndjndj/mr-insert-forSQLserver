@@ -15,6 +15,7 @@ function loadTSV() {
   const tsv = document.getElementById('input').value;
   let delimFileData = tsv.replace(/\r\n/g, '\n');
   const arrCSV = delimFileData.split('\n').map(s => s.split('\t'));
+  console.log(tsv);
   console.log(arrCSV);
   return arrCSV;
 }
@@ -50,6 +51,7 @@ function onClickConvertBtn() {
         const json = convertTSVToJson();
         updateJsonArea(json);
         window.alert('complete.');
-    }
+      }
+    , false
   );
 }
