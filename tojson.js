@@ -44,11 +44,11 @@ function onClickConvertBtn() {
   btn.addEventListener(
       'click'
     , function(e) {
-        //e.stopPropagation();
-        //e.preventDefault();
-        // initialize();
-        // const json = convertTSVToJson();
-        // updateJsonArea(json);
+        e.stopPropagation();
+        e.preventDefault();
+        initialize();
+        const json = convertTSVToJson();
+        updateJsonArea(json);
         window.alert('complete.');
     }
   );
