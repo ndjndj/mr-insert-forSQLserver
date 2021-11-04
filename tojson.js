@@ -14,7 +14,11 @@ function initialize() {
 
 function loadTSV() {
   const tsv = document.getElementById('input').value;
-  let delimFileData = filedata.replace(/\r\n/g, '\n');
+  let delimFileData = tsv.replace(/\r\n/g, '\n');
   const arrCSV = delimFileData.split('\n').map(s => s.split('\t'));
   return arrCSV;
+}
+
+function tsvToJson() {
+
 }
