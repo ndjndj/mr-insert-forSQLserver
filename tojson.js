@@ -36,7 +36,7 @@ function convertTSVToJson() {
 
 function updateJsonArea(json) {
   const jsonArea = document.getElementById('json');
-  const stringifyJson = JSON.stringify(json);
+  const stringifyJson = JSON.stringify(json, null, '\t');
   jsonArea.value = stringifyJson;
 }
 
@@ -47,7 +47,6 @@ function onClickConvertBtn() {
     , function(e) {
         e.stopPropagation();
         e.preventDefault();
-        initialize();
         const json = convertTSVToJson();
         updateJsonArea(json);
         window.alert('complete.');
