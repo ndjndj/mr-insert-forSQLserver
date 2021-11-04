@@ -48,6 +48,7 @@ function onClickConvertBtn() {
         initialize();
         const json = convertTSVToJson();
         updateJsonArea(json);
+        window.alert('complete.');
     }
   );
 }
