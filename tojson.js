@@ -2,7 +2,7 @@ const main = () => {
   window.addEventListener(
       'load'
     , () => {
-
+        onClickConvertBtn();
     }
   );
 }
