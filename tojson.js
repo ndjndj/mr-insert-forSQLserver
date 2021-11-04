@@ -39,3 +39,15 @@ function updateJsonArea(json) {
   jsonArea.value = stringifyJson;
 }
 
+function onClickConvertBtn() {
+  document.getElementById('convert').addEventListener(
+      'click'
+    , function(e) {
+        e.stopPropagation;
+        e.preventDefault();
+        initialize();
+        const json = convertTSVToJson();
+        updateJsonArea(json);
+    }
+  );
+}
