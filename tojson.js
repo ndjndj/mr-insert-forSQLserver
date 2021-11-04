@@ -20,5 +20,16 @@ function loadTSV() {
 }
 
 function tsvToJson() {
-
+  const arrCSV = loadTSV();
+  const toJson = {};
+  let cmpcd = '';
+  for (var i=0; i < arrCSV.length; i++) {
+    cmpcd = String(arrCSV[i][0]);
+    toJson[cmpcd] = {};
+    toJson[cmpcd]['cmpnm'] = String(arrCSV[i][1]);
+    toJson[cmpcd]['pnm'] = String(arrCSV[i][2]);
+    toJson[cmpcd]['paddress'] = String(arrCSV[i][3]);
+  }
+  return toJson
 }
+
