@@ -33,3 +33,8 @@ function tsvToJson() {
   return toJson
 }
 
+function updateJsonArea(json) {
+  const jsonArea = document.getElementById('json');
+  const stringifyJson = JSON.stringify(json);
+  jsonArea.value = stringifyJson;
+}
