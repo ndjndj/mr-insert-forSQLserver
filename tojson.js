@@ -30,6 +30,7 @@ function convertTSVToJson() {
     toJson[cmpcd]['cmpnm'] = String(arrCSV[i][1]);
     toJson[cmpcd]['pnm'] = String(arrCSV[i][2]);
     toJson[cmpcd]['paddress'] = String(arrCSV[i][3]);
+    toJson[cmpcd]['dbnm'] = String(arrCSV[i][4])
   }
   return toJson
 }
