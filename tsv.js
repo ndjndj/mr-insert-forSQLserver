@@ -12,14 +12,13 @@ window.addEventListener(
 
 function inputFocus() {
   const inputArea = Array.from(document.getElementsByClassName('input'));
-  
   inputArea.forEach(
     (target) => {
       console.log(target)
       target.addEventListener(
-        'fucus'
+        'focus'
       , function(e) {
-          e.target.style.background = '#cccccc';
+          e.target.style.background = '#f2ebea';
         }
       );
     }
