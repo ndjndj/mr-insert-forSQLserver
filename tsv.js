@@ -49,6 +49,7 @@ const receiveCSV = () => {
 function initialize() {
   document.getElementById('convert').style.display = 'none';
   document.getElementById('init').style.display = 'none';
+  document.getElementById('create').style.display = 'inline-block';
   document.getElementById('table-name').value = '';
   document.getElementById('input').value = null;
   document.getElementById('result').innerHTML = '';
