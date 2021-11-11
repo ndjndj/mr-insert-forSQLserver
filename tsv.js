@@ -5,9 +5,25 @@ window.addEventListener(
       initialize();
       initializeEvent();
       receiveCSV();
+      inputFocus();
       outputQuery();
     }
 );
+
+function inputFocus() {
+  const inputArea = Array.from(document.getElementsByClassName('input'));
+  console.log(inputArea);
+  inputArea.forEach(
+    (target) => {
+      target.addEventListener(
+        'fucus'
+      , function(e) {
+          e.target.style.background = '#cccccc';
+        }
+      );
+    }
+  );
+}
 
 function initializeEvent() {
   const initButton = document.getElementById('init');
