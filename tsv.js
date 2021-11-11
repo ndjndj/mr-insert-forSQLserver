@@ -1,15 +1,13 @@
 var CSV_ARRAYS;
+ window.addEventListener(
+    'load'
+  , () => {
+      initialize();
+      receiveCSV();
+      outputQuery();
+    }
+);
 
-const main = () => {
-    window.addEventListener(
-        'load'
-      , () => {
-          receiveCSV();
-          outputQuery();
-        }
-    );
-
-}
 
 function outputQuery() {
   const convertButton = document.getElementById('convert');
@@ -25,7 +23,6 @@ function outputQuery() {
 }
 
 const receiveCSV = () => {
-
   const createButton = document.getElementById('create');
   createButton.addEventListener(
       'click'
@@ -37,10 +34,11 @@ const receiveCSV = () => {
 }
 
 function initialize() {
-  const input = document.getElementById('input');
-  const table = document.getElementById('result');
-  input.value = null;
-  table.innerHTML = '';
+  document.getElementById('convert').display = 'none';
+  document.getElementById('table-name').value = '';
+  document.getElementById('input').value = null;
+  document.getElementById('result').innerHTML = '';
+  document.getElementById('query').innerHTML = '';
 }
 
 function createSelect() {
@@ -159,5 +157,3 @@ function createQuery() {
   result.style.display = 'none';
   window.alert('complete!');
 }
-
-main();
