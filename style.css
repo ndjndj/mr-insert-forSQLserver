@@ -26,3 +26,7 @@ select {
     height: 50%;
     white-space: pre-wrap;
 }
+
+.input:focus {
+    background-color: #f2ebea;
+}
