@@ -8,6 +8,18 @@ window.addEventListener(
     }
 );
 
+function initializeEvent() {
+  const initButton = document.getElementById('init');
+  initButton.addEventListener(
+      'click'
+    , function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        initialize();
+      }
+    , false
+  );
+}
 
 function outputQuery() {
   const convertButton = document.getElementById('convert');
