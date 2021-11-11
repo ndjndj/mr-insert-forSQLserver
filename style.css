@@ -3,35 +3,13 @@ select {
     margin: 2px;
 }
 
-table {
-    border: solid 1px #000000;
-}
-
-th {
-    width: 150px;
-    border: solid 1px #000000;
-}
-
-td {
-    width: 150px;
-    border: solid 1px #000000;
-}
-
-#file-input {
-    margin: 2%;
-}
-
 .btn {
-    color: inherit;
-    text-decoration: none;
-    border: solid 1px #e69f8a;
-    margin: 2%;
-    margin-top: 10%;
+    background-color: #f2ebea;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #e97755;
+    background-color: #3d92a4;
     cursor: pointer;
 }
 
