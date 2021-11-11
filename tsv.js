@@ -1,5 +1,5 @@
 var CSV_ARRAYS;
- window.addEventListener(
+window.addEventListener(
     'load'
   , () => {
       initialize();
@@ -56,6 +56,10 @@ function createSelect() {
 }
 
 function createTable(filedata) {
+  if (!filedata) {
+    window.alert('data is null.');
+    return;
+  }
   let delimFileData = filedata.replace(/\r\n/g, '\n');
   const arrCSV = delimFileData.split('\n').map(s => s.split('\t'));
   CSV_ARRAYS = arrCSV;
@@ -152,6 +156,14 @@ function createQuery() {
     INSERT INTO ${tableName}(${columnName}) VALUES \n
     ${cellString}
   `;
+
+  let alertMassage = '';
+  alertMassage += !tableName ? 'table name is null. \n' : '';
+  if (alertMessage) {
+    window.alert(alertMassage);
+    return
+  }
+  
 
   document.getElementById('query').value = query;
   result.style.display = 'none';
