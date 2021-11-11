@@ -2,7 +2,6 @@ var CSV_ARRAYS;
 window.addEventListener(
     'load'
   , () => {
-      initialize();
       initializeEvent();
       receiveCSV();
       outputQuery();
@@ -10,7 +9,11 @@ window.addEventListener(
 );
 
 function initializeEvent() {
+  document.getElementById('create').style.display = 'inline-block';
+  document.getElementById('convert').style.display = 'none';
+  document.getElementById('init').style.display = 'none';
   const initButton = document.getElementById('init');
+  
   initButton.addEventListener(
       'click'
     , function(e) {
@@ -47,13 +50,7 @@ const receiveCSV = () => {
 }
 
 function initialize() {
-  document.getElementById('convert').style.display = 'none';
-  document.getElementById('init').style.display = 'none';
-  document.getElementById('create').style.display = 'inline-block';
-  document.getElementById('table-name').value = '';
-  document.getElementById('input').value = null;
-  document.getElementById('result').innerHTML = '';
-  document.getElementById('query').value = null;
+  location.reload();
 }
 
 function createSelect() {
