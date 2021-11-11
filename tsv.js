@@ -35,7 +35,7 @@ const receiveCSV = () => {
 
 function initialize() {
   document.getElementById('convert').style.display = 'none';
-  document.getElementById('initialize').style.display = 'none';
+  document.getElementById('init').style.display = 'none';
   document.getElementById('table-name').value = '';
   document.getElementById('input').value = null;
   document.getElementById('result').innerHTML = '';
@@ -108,6 +108,9 @@ function createTable(filedata) {
 
   result.appendChild(table);
 
+  document.getElementById('create').style.display = 'none';
+  document.getElementById('convert').style.display = 'inline-block';
+  document.getElementById('init').style.display = 'none';
 }
 
 
@@ -160,13 +163,16 @@ function createQuery() {
 
   let alertMassage = '';
   alertMassage += !tableName ? 'table name is null. \n' : '';
-  if (alertMessage) {
+  if (alertMassage) {
     window.alert(alertMassage);
     return
   }
   
 
   document.getElementById('query').value = query;
+  document.getElementById('create').style.display = 'none';
+  document.getElementById('convert').style.display = 'none';
+  document.getElementById('init').style.display = 'inline-block';
   result.style.display = 'none';
   window.alert('complete!');
 }
