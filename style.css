@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+main {
+    margin: 1%;
+}
+
 select {
     width: 150px;
     margin: 2px;
@@ -10,7 +15,7 @@ h1 {
     background-color: #f2ebea;
 }
 body {
-    background-color: #8f8b88;
+    background-color: #afadac;
 }
 
 .btn {
