@@ -3,8 +3,12 @@ select {
     margin: 2px;
 }
 
+body {
+    background-color: #8f8b88;
+}
+
 .btn {
-    background-color: #f2ebea;
+    background-color: #e5e5e5;
     color: #a59ea4;
     border-color: #f2ebea;
     border-radius: 5px;
@@ -28,5 +32,6 @@ select {
 }
 
 .input:focus {
-    background-color: #f2ebea;
+    background-color: #e5e5e5;
+    border-color: #d8b5b3;
 }
