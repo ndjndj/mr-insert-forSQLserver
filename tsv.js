@@ -52,7 +52,7 @@ function initialize() {
   document.getElementById('table-name').value = '';
   document.getElementById('input').value = null;
   document.getElementById('result').innerHTML = '';
-  document.getElementById('query').innerHTML = '';
+  document.getElementById('query').value = null;
 }
 
 function createSelect() {
