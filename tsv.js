@@ -12,9 +12,10 @@ window.addEventListener(
 
 function inputFocus() {
   const inputArea = Array.from(document.getElementsByClassName('input'));
-  console.log(inputArea);
+  
   inputArea.forEach(
     (target) => {
+      console.log(target)
       target.addEventListener(
         'fucus'
       , function(e) {
