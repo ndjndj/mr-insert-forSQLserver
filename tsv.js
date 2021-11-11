@@ -34,7 +34,8 @@ const receiveCSV = () => {
 }
 
 function initialize() {
-  document.getElementById('convert').display = 'none';
+  document.getElementById('convert').style.display = 'none';
+  document.getElementById('initialize').style.display = 'none';
   document.getElementById('table-name').value = '';
   document.getElementById('input').value = null;
   document.getElementById('result').innerHTML = '';
