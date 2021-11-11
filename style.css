@@ -1,8 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 select {
     width: 150px;
     margin: 2px;
 }
-
+h1 {
+    background-color: #f2ebea;
+}
 body {
     background-color: #8f8b88;
 }
