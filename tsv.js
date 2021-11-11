@@ -3,6 +3,7 @@ window.addEventListener(
     'load'
   , () => {
       initialize();
+      initializeEvent();
       receiveCSV();
       outputQuery();
     }
