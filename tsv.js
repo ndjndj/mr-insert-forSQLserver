@@ -2,6 +2,7 @@ var CSV_ARRAYS;
 var CREATE_BUTTON;
 var CONVERT_BUTTON;
 var INIT_BUTTON;
+var BUTTONS;
 window.addEventListener(
     'load'
   , () => {
@@ -10,6 +11,12 @@ window.addEventListener(
       outputQuery();
     }
 );
+
+function getConstant() {
+  CREATE_BUTTON = document.getElementById('create');
+  CONVERT_BUTTON = document.getElementById('convert');
+  INIT_BUTTON = document.getElementById('init');
+}
 
 function controlActiveButton(buttons, purposeNode) {
   buttons.forEach(element => {
