@@ -132,10 +132,7 @@ function createTable(filedata) {
   }
 
   result.appendChild(table);
-  
-  document.getElementById('create').style.display = 'none';
-  document.getElementById('convert').style.display = 'inline-block';
-  document.getElementById('init').style.display = 'none';
+  controlActiveButton(BUTTONS, CONVERT_BUTTON);
 }
 
 
