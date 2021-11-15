@@ -192,9 +192,7 @@ function createQuery() {
   
 
   document.getElementById('query').value = query;
-  document.getElementById('create').style.display = 'none';
-  document.getElementById('convert').style.display = 'none';
-  document.getElementById('init').style.display = 'inline-block';
+  controlActiveButton(BUTTONS, INIT_BUTTON);
   result.style.display = 'none';
   window.alert('complete!');
 }
