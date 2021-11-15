@@ -16,6 +16,7 @@ function getConstant() {
   CREATE_BUTTON = document.getElementById('create');
   CONVERT_BUTTON = document.getElementById('convert');
   INIT_BUTTON = document.getElementById('init');
+  BUTTONS = [CREATE_BUTTON, CONVERT_BUTTON, INIT_BUTTON];
 }
 
 function controlActiveButton(buttons, purposeNode) {
