@@ -45,6 +45,7 @@ function outputQuery() {
   CONVERT_BUTTON.addEventListener(
       'click'
     , function(e) {
+        // insert文を作成
         e.stopPropagation();
         e.preventDefault();
         createQuery();
