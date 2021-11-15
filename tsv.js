@@ -30,9 +30,7 @@ function controlActiveButton(buttons, purposeNode) {
 }
 
 function initializeEvent() {
-  const initButton = document.getElementById('init');
-  
-  initButton.addEventListener(
+  INIT_BUTTON.addEventListener(
       'click'
     , function(e) {
         e.stopPropagation();
