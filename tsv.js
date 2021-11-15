@@ -14,6 +14,7 @@ window.addEventListener(
     }
 );
 
+// よく使う要素は定数に格納
 function getConstant() {
   CREATE_BUTTON = document.getElementById('create');
   CONVERT_BUTTON = document.getElementById('convert');
