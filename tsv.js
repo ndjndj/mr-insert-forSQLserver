@@ -9,10 +9,7 @@ window.addEventListener(
 );
 
 function controlActiveButton(buttons, purposeNode) {
-  console.log(buttons)
-  console.log(purposeNode.id)
   buttons.forEach(element => {
-    console.log(element.id)    
     element.style.display = purposeNode.id == element.id ? 'inline-block' : 'none';
   });
 }
