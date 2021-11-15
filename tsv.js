@@ -57,8 +57,8 @@ const receiveCSV = () => {
   CREATE_BUTTON.addEventListener(
       'click'
     , function(e) {
-        const fileInput = document.getElementById('input');
-        createTable(fileInput.value);
+        // データテーブルを作成
+        createTable(document.getElementById('input'));
       }
   );
 }
