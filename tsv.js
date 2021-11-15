@@ -6,6 +6,8 @@ var BUTTONS;
 window.addEventListener(
     'load'
   , () => {
+      getConstant();
+      controlActiveButton(BUTTONS, CREATE_BUTTON);
       initializeEvent();
       receiveCSV();
       outputQuery();
@@ -26,8 +28,6 @@ function controlActiveButton(buttons, purposeNode) {
 }
 
 function initializeEvent() {
-  controlActiveButton([document.getElementById('create'), document.getElementById('convert'), document.getElementById('init')], document.getElementById('create'));
-  
   const initButton = document.getElementById('init');
   
   initButton.addEventListener(
