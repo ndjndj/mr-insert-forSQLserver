@@ -8,10 +8,18 @@ window.addEventListener(
     }
 );
 
+function controlActiveButton(buttons, purposeNode) {
+  console.log(buttons)
+  console.log(purposeNode.id)
+  buttons.forEach(element => {
+    console.log(element.id)    
+    element.style.display = purposeNode.id == element.id ? 'inline-block' : 'none';
+  });
+}
+
 function initializeEvent() {
-  document.getElementById('create').style.display = 'inline-block';
-  document.getElementById('convert').style.display = 'none';
-  document.getElementById('init').style.display = 'none';
+  controlActiveButton([document.getElementById('create'), document.getElementById('convert'), document.getElementById('init')], document.getElementById('create'));
+  
   const initButton = document.getElementById('init');
   
   initButton.addEventListener(
