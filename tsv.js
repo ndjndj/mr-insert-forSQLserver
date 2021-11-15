@@ -42,8 +42,7 @@ function initializeEvent() {
 }
 
 function outputQuery() {
-  const convertButton = document.getElementById('convert');
-  convertButton.addEventListener(
+  CONVERT_BUTTON.addEventListener(
       'click'
     , function(e) {
         e.stopPropagation();
@@ -55,8 +54,7 @@ function outputQuery() {
 }
 
 const receiveCSV = () => {
-  const createButton = document.getElementById('create');
-  createButton.addEventListener(
+  CREATE_BUTTON.addEventListener(
       'click'
     , function(e) {
         const fileInput = document.getElementById('input');
@@ -134,7 +132,7 @@ function createTable(filedata) {
   }
 
   result.appendChild(table);
-
+  
   document.getElementById('create').style.display = 'none';
   document.getElementById('convert').style.display = 'inline-block';
   document.getElementById('init').style.display = 'none';
