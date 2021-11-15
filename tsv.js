@@ -22,6 +22,7 @@ function getConstant() {
   BUTTONS = [CREATE_BUTTON, CONVERT_BUTTON, INIT_BUTTON];
 }
 
+// ボタンの表示制御
 function controlActiveButton(buttons, purposeNode) {
   buttons.forEach(element => {
     element.style.display = purposeNode.id == element.id ? 'inline-block' : 'none';
