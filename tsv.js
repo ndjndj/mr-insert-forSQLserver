@@ -59,7 +59,7 @@ const receiveCSV = () => {
       'click'
     , function(e) {
         // データテーブルを作成
-        createTable(document.getElementById('input'));
+        createTable(document.getElementById('input').value);
       }
   );
 }
