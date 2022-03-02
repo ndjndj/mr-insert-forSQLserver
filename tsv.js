@@ -68,6 +68,12 @@ function initialize() {
   location.reload();
 }
 
+function createCheck() {
+  let input = document.createElement('input');
+  input.className = 'check';
+  let type = '\'\'で囲む';
+}
+
 function createSelect() {
   let select = document.createElement('select');
   let option = document.createElement('option');
@@ -190,7 +196,7 @@ function createQuery() {
     window.alert(alertMassage);
     return
   }
-  
+
 
   document.getElementById('query').value = query;
   controlActiveButton(BUTTONS, INIT_BUTTON);
