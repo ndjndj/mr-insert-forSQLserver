@@ -72,6 +72,8 @@ function createCheck() {
   let input = document.createElement('input');
   input.className = 'check';
   let type = '\'\'で囲む';
+  input.type = "";
+  input.value = type;
 }
 
 function createSelect() {
