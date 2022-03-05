@@ -68,6 +68,10 @@ function initialize() {
   location.reload();
 }
 
+function autoCompleteType() {
+  return;
+}
+
 function selectNull () {
   return;
 }
