@@ -74,7 +74,7 @@ function createCheck() {
   let type = '\'\'で囲む';
   input.type = "";
   input.value = type;
-  return true;
+  return input;
 }
 
 function createSelect() {
