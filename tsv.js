@@ -68,6 +68,10 @@ function initialize() {
   location.reload();
 }
 
+function selectNull () {
+  return;
+}
+
 function createCheck() {
   let input = document.createElement('input');
   input.className = 'check';
