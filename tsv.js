@@ -178,6 +178,13 @@ function createQuery() {
   let checks = document.getElementsByClassName('check');
   let cellString = '';
 
+  let alertMassage = '';
+  alertMassage += !tableName ? 'table name is null. \n' : '';
+  if (alertMassage) {
+    window.alert(alertMassage);
+    return
+  }
+
   var tmpArr = [];
   var type;
   var cell;
@@ -208,14 +215,6 @@ function createQuery() {
     INSERT INTO ${tableName}(${columnName}) VALUES \n
     ${cellString}
   `;
-
-  let alertMassage = '';
-  alertMassage += !tableName ? 'table name is null. \n' : '';
-  if (alertMassage) {
-    window.alert(alertMassage);
-    return
-  }
-
 
   document.getElementById('query').value = query;
   controlActiveButton(BUTTONS, INIT_BUTTON);
