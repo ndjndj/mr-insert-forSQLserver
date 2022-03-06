@@ -189,10 +189,10 @@ function createQuery() {
       continue;
     }
     for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
-      type = Number(checks[j].value);
+      type = Number(checks[j].checked);
 
       cell = type ? `'${String(CSV_ARRAYS[i][j])}'` : CSV_ARRAYS[i][j];
-      
+
       cell = cell == '' ? 'NULL' : cell;
 
       tmpArr.push(cell);
