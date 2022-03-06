@@ -176,6 +176,7 @@ function createQuery() {
   let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
   let selects = document.getElementsByClassName('select');
+  let checks = document.getElementsByClassName('check');
   let cellString = '';
 
   var tmpArr = [];
