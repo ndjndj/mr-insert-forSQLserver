@@ -131,19 +131,19 @@ function createTable(filedata) {
   let th = document.createElement('th');
   let td = document.createElement('td');
   let optionRow = document.createElement('tr');
-  let select = createCheck();
+  let check = createCheck();
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
-        select.id = String(j);
+        check.id = String(j);
 
         tmpElem = td;
-        tmpElem.appendChild(select);
+        tmpElem.appendChild(check);
         optionRow.appendChild(tmpElem);
         // initialize
         td = null;
         td = document.createElement('td');
-        select = createCheck();
+        check = createCheck();
       }
 
       tmpElem = i == 0 ? th : td;
