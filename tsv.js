@@ -94,7 +94,7 @@ function createCheck() {
   let label = document.createElement('label');
   label.htmlFor = uniqueID;
   label.innerText = type;
-  label.class = 'label-inline';
+  label.className = 'label-inline';
 
   container.appendChild(input);
   container.appendChild(label);
