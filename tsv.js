@@ -175,7 +175,6 @@ function createQuery() {
   const tableName = document.getElementById('table-name').value;
   let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
-  let selects = document.getElementsByClassName('select');
   let checks = document.getElementsByClassName('check');
   let cellString = '';
 
