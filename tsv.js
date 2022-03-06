@@ -95,8 +95,9 @@ function createCheck() {
   label.for = uniqueID;
   label.innerText = type;
 
-  
-  return input;
+  container.appendChild(input);
+  container.appendChild(label);
+  return container;
 }
 
 function createSelect() {
