@@ -128,7 +128,7 @@ function createTable(filedata) {
         // initialize
         td = null;
         td = document.createElement('td');
-        select = createSelect();
+        select = createCheck();
       }
 
       tmpElem = i == 0 ? th : td;
