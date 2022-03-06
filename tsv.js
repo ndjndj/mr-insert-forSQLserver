@@ -14,6 +14,10 @@ window.addEventListener(
     }
 );
 
+function getUniqueString(strong=1000, initialString='') {
+  return initialString + new Date().getTime().toString(16) + Math.floor(strong * Math.random()).toString(16);
+}
+
 // よく使う要素は定数に格納
 function getConstant() {
   CREATE_BUTTON = document.getElementById('create');
@@ -78,10 +82,16 @@ function selectNull () {
 
 function createCheck() {
   let container = document.createElement('div');
+  //checkbox
   let input = document.createElement('input');
   input.className = 'check';
   let type = '\'\'で囲む';
   input.type = "checkbox";
+
+  //label
+  let label = document.createElement('label');
+
+
   input.value = type;
   input.innerText = type;
   return input;
