@@ -81,19 +81,21 @@ function selectNull () {
 }
 
 function createCheck() {
+  let uniqueID = getUniqueString('check-');
   let container = document.createElement('div');
   //checkbox
   let input = document.createElement('input');
   input.className = 'check';
+  input.id = uniqueID;
   let type = '\'\'で囲む';
   input.type = "checkbox";
 
   //label
   let label = document.createElement('label');
+  label.for = uniqueID;
+  label.innerText = type;
 
-
-  input.value = type;
-  input.innerText = type;
+  
   return input;
 }
 
