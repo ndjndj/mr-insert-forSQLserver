@@ -116,7 +116,7 @@ function createTable(filedata) {
   let th = document.createElement('th');
   let td = document.createElement('td');
   let optionRow = document.createElement('tr');
-  let select = createSelect();
+  let select = createCheck();
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
