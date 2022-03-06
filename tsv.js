@@ -81,7 +81,7 @@ function selectNull () {
 }
 
 function createCheck() {
-  let uniqueID = getUniqueString('check-');
+  let uniqueID = getUniqueString(initialize = 'check-');
   let container = document.createElement('div');
   //checkbox
   let input = document.createElement('input');
