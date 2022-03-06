@@ -4,7 +4,7 @@
 
 <dl>
   <dt>2022/02/25</dt>
-  <dd>ver1.0 release</dd>
+  <dd>release</dd>
   <dt>2022/03/07</dt>
   <dd>文字列選択をセレクトボックスからチェックボックスに変更</dd>
 </dl>
