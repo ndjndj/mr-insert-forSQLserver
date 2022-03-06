@@ -80,8 +80,9 @@ function createCheck() {
   let input = document.createElement('input');
   input.className = 'check';
   let type = '\'\'で囲む';
-  input.type = "";
+  input.type = "checkbox";
   input.value = type;
+  input.innerText = type;
   return input;
 }
 
