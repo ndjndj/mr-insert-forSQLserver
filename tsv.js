@@ -92,7 +92,7 @@ function createCheck() {
 
   //label
   let label = document.createElement('label');
-  label.for = uniqueID;
+  label.htmlFor = uniqueID;
   label.innerText = type;
 
   container.appendChild(input);
