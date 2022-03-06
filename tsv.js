@@ -77,6 +77,7 @@ function selectNull () {
 }
 
 function createCheck() {
+  let container = document.createElement('div');
   let input = document.createElement('input');
   input.className = 'check';
   let type = '\'\'で囲む';
