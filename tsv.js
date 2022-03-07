@@ -180,6 +180,7 @@ function createQuery() {
   let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
   let checks = document.getElementsByClassName('check-string');
+  let nulls = document.getElementsByClassName('check-null');
   let cellString = '';
 
   let alertMassage = '';
