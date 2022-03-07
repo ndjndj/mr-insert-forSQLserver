@@ -77,7 +77,8 @@ function autoCompleteType() {
 }
 
 function selectNull () {
-  return;
+  let n = createCheck('空文字はNULL変換する', 'check-null');
+  return n;
 }
 
 function createCheck(desc, className) {
