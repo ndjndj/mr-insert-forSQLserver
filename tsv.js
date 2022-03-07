@@ -201,6 +201,7 @@ function createQuery() {
     }
     for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
       type = Number(checks[j].checked);
+      nullable = Number(nulls[j].checked);
 
       cell = type ? `'${String(CSV_ARRAYS[i][j])}'` : CSV_ARRAYS[i][j];
 
