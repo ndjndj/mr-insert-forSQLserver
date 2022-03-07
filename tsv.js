@@ -137,8 +137,7 @@ function createTable(filedata) {
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
-        check.id = String(j);
-        nullCheck.id = String(j);
+        
         tmpElem = td;
         tmpElem.appendChild(check);
         tmpElem.appendChild(nullCheck);
