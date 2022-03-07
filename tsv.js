@@ -138,23 +138,16 @@ function createTable(filedata) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
         check.id = String(j);
-
+        nullCheck.id = String(j);
         tmpElem = td;
         tmpElem.appendChild(check);
+        tmpElem.appendChild(nullCheck);
+        
         optionRow.appendChild(tmpElem);
         // initialize
         td = null;
         td = document.createElement('td');
         check = createCheck('\'\'で囲む', 'check-string');
-
-        nullCheck.id = String(j);
-
-        tmpElem = td;
-        tmpElem.appendChild(check);
-        optionRow.appendChild(tmpElem);
-        // initialize
-        td = null;
-        td = document.createElement('td');
         nullCheck = selectNull();
       }
 
