@@ -85,7 +85,7 @@ function createCheck() {
   let container = document.createElement('div');
   //checkbox
   let input = document.createElement('input');
-  input.className = 'check';
+  input.className = 'check-string';
   input.id = uniqueID;
   let type = '\'\'で囲む';
   input.type = "checkbox";
@@ -175,7 +175,7 @@ function createQuery() {
   const tableName = document.getElementById('table-name').value;
   let columnName = CSV_ARRAYS[0].join(',');
   let datas = [];
-  let checks = document.getElementsByClassName('check');
+  let checks = document.getElementsByClassName('check-string');
   let cellString = '';
 
   let alertMassage = '';
