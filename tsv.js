@@ -133,21 +133,21 @@ function createTable(filedata) {
   let td = document.createElement('td');
   let optionRow = document.createElement('tr');
   let check = createCheck('\'\'で囲む', 'check-string');
-  let nullCheck = selectNull();
+  //let nullCheck = selectNull();
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
         
         tmpElem = td;
         tmpElem.appendChild(check);
-        tmpElem.appendChild(nullCheck);
+        //tmpElem.appendChild(nullCheck);
         
         optionRow.appendChild(tmpElem);
         // initialize
         td = null;
         td = document.createElement('td');
         check = createCheck('\'\'で囲む', 'check-string');
-        nullCheck = selectNull();
+        //nullCheck = selectNull();
       }
 
       tmpElem = i == 0 ? th : td;
@@ -201,7 +201,9 @@ function createQuery() {
     }
     for (var j = 0; j < CSV_ARRAYS[i].length; j++) {
       type = Number(checks[j].checked);
-      nullable = Number(nulls[j].checked);
+      //nullable = Number(nulls[j].checked);
+
+      
 
       cell = type ? `'${String(CSV_ARRAYS[i][j])}'` : CSV_ARRAYS[i][j];
 
