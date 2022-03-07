@@ -207,7 +207,7 @@ function createQuery() {
 
       cell = type ? `'${String(CSV_ARRAYS[i][j])}'` : CSV_ARRAYS[i][j];
 
-      cell = cell == '' ? 'NULL' : cell;
+      cell = cell == '' || `''` ? 'NULL' : cell;
 
       tmpArr.push(cell);
     }
