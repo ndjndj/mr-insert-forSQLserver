@@ -80,14 +80,14 @@ function selectNull () {
   return;
 }
 
-function createCheck() {
+function createCheck(desc, className) {
   let uniqueID = getUniqueString(initialize = 'check-');
   let container = document.createElement('div');
   //checkbox
   let input = document.createElement('input');
-  input.className = 'check-string';
+  input.className = className;
   input.id = uniqueID;
-  let type = '\'\'で囲む';
+  let type = desc;
   input.type = "checkbox";
 
   //label
@@ -131,7 +131,7 @@ function createTable(filedata) {
   let th = document.createElement('th');
   let td = document.createElement('td');
   let optionRow = document.createElement('tr');
-  let check = createCheck();
+  let check = createCheck('\'\'で囲む', 'check-string');
   for (var i = 0; i < arrCSV.length; i++) {
     for (var j = 0; j < arrCSV[i].length; j++) {
       if (i == 1) {
@@ -143,7 +143,7 @@ function createTable(filedata) {
         // initialize
         td = null;
         td = document.createElement('td');
-        check = createCheck();
+        check = createCheck('\'\'で囲む', 'check-string');
       }
 
       tmpElem = i == 0 ? th : td;
