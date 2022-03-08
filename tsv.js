@@ -88,16 +88,16 @@ function createCheck(desc, className) {
   let input = document.createElement('input');
   input.className = className;
   input.id = uniqueID;
-  let type = desc;
   input.type = "checkbox";
 
   //label
   let label = document.createElement('label');
-  label.htmlFor = uniqueID;
   
+  label.htmlFor = uniqueID;
   label.className = 'label-inline';
   label.appendChild(input);
-  label.innerText += type;
+  label.innerHTML += desc;
+
   return label;
 }
 
