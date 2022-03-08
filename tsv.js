@@ -146,7 +146,7 @@ function createTable(filedata) {
         // initialize
         td = null;
         td = document.createElement('td');
-        check = createCheck('\'\'で囲む', 'check-string');
+        check = createCheck('+\'\'', 'check-string');
         //nullCheck = selectNull();
       }
 
