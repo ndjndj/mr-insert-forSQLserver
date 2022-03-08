@@ -2,7 +2,6 @@ var CSV_ARRAYS;
 var CREATE_BUTTON;
 var CONVERT_BUTTON;
 var INIT_BUTTON;
-
 var BUTTONS;
 window.addEventListener(
     'load'
