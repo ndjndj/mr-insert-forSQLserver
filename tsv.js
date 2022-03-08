@@ -83,7 +83,7 @@ function selectNull () {
 
 function createCheck(desc, className) {
   let uniqueID = getUniqueString(undefined, 'check-');
-  let container = document.createElement('div');
+
   //checkbox
   let input = document.createElement('input');
   input.className = className;
@@ -97,9 +97,9 @@ function createCheck(desc, className) {
   label.innerText = type;
   label.className = 'label-inline';
 
-  container.appendChild(input);
-  container.appendChild(label);
-  return container;
+  label.appendChild(input);
+  
+  return label;
 }
 
 function createSelect() {
