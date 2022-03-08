@@ -101,6 +101,7 @@ h1 {
     height: 100%;
 }
 
-.check-parent {
-    padding: 0;
+td {
+    padding: 0rem;
+    margin: 1.2rem 1.5rem;
 }
