@@ -76,3 +76,8 @@ dd {
     margin-right: 2%;
     border-bottom: 1px solid #CCCCCC;
 }
+
+h2 {
+    text-decoration: underline;
+    text-decoration-color: #3d92a4;
+}
