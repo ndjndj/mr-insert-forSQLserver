@@ -81,3 +81,8 @@ h2 {
     text-decoration: underline;
     text-decoration-color: #3d92a4;
 }
+
+h1 {
+    margin-left: 1%;
+    padding-top: 1%;
+}
