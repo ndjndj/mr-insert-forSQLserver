@@ -40,6 +40,11 @@ select {
     white-space: pre-wrap;
 }
 
+input[type='text']:focus {
+    background-color: #e5e5e5;
+    border-color: #3d92a4;
+}
+
 .input:focus {
     background-color: #e5e5e5;
     border-color: #3d92a4;
