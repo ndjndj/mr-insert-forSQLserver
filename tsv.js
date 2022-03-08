@@ -146,6 +146,7 @@ function createTable(filedata) {
         // initialize
         td = null;
         td = document.createElement('td');
+        td.className = 'check-parent';
         check = createCheck('+\'\'', 'check-string');
         //nullCheck = selectNull();
       }
