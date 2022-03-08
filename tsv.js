@@ -97,7 +97,7 @@ function createCheck(desc, className) {
   
   label.className = 'label-inline';
   label.appendChild(input);
-  label.innerText = type;
+  label.innerText += type;
   return label;
 }
 
