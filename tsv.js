@@ -94,11 +94,10 @@ function createCheck(desc, className) {
   //label
   let label = document.createElement('label');
   label.htmlFor = uniqueID;
-  label.innerText = type;
-  label.className = 'label-inline';
-
-  label.appendChild(input);
   
+  label.className = 'label-inline';
+  label.appendChild(input);
+  label.innerText = type;
   return label;
 }
 
