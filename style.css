@@ -38,12 +38,12 @@ select {
 
 .input:focus {
     background-color: #e5e5e5;
-    border-color: #d8b5b3;
+    border-color: #3d92a4;
 }
 
 
 #update-history {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #e5e5e5;
     border-radius: 10px;
     overflow: hidden;
     margin-top: 2%;
